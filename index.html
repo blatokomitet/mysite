@@ -3,43 +3,67 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#07090f">
+<meta name="theme-color" content="#080b12">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <title>RUSTAM OS — Football Intelligence</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./style.css">
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-<div class="app">
+<div class="app-shell">
   <header class="topbar">
-    <div class="brand"><div class="logo">R</div><div><b>RUSTAM OS</b><span>FOOTBALL INTELLIGENCE</span></div></div>
-    <button class="round" id="refresh">↻</button>
+    <div class="brand">
+      <div class="brand-mark"><span>R</span></div>
+      <div><strong>RUSTAM OS</strong><small>FOOTBALL INTELLIGENCE</small></div>
+    </div>
+    <div class="top-actions">
+      <span class="live-dot">LIVE ENGINE</span>
+      <button class="icon-btn" id="refresh" aria-label="Обновить">↻</button>
+    </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div><span class="eyebrow">MATCH CENTER</span><h1 id="title">Выбери матч</h1><p id="subtitle">Загружаем данные аналитического движка…</p></div>
-      <div class="status"><i></i> DATA ENGINE ONLINE</div>
-    </section>
-
-    <section class="match-card" id="matchCard">
-      <div class="league"><span>UEFA CHAMPIONS LEAGUE</span><em id="kickoff">—</em></div>
-      <div class="teams">
-        <div class="team"><div class="crest"><img id="homeLogo" alt=""></div><b id="homeName">Home</b><small>HOME</small></div>
-        <div class="score"><strong id="score">—</strong><span id="dateText">PRE-MATCH</span></div>
-        <div class="team"><div class="crest"><img id="awayLogo" alt=""></div><b id="awayName">Away</b><small>AWAY</small></div>
+    <section class="page-head">
+      <div>
+        <div class="kicker">MATCH INTELLIGENCE</div>
+        <h1 id="title">Выбери матч</h1>
+        <p id="subtitle">Загружаем аналитический пакет</p>
       </div>
-      <div class="match-meta"><span id="venue">Fixture intelligence</span><span id="fixtureId">ID —</span></div>
+      <div class="engine-badge"><i></i><span>DATA ENGINE<br><b>ONLINE</b></span></div>
     </section>
 
-    <nav class="tabs" id="tabs">
-      <button class="active" data-tab="prediction">🎯 Прогноз</button>
-      <button data-tab="form">📈 Форма</button>
-      <button data-tab="h2h">🤝 H2H</button>
-      <button data-tab="table">🏆 Таблица</button>
-      <button data-tab="odds">💰 Odds</button>
-      <button data-tab="risk">⚠️ Риск</button>
+    <section class="match-hero" id="matchCard">
+      <div class="competition-row"><span id="league">FOOTBALL</span><span id="kickoff">—</span></div>
+      <div class="match-main">
+        <div class="team-block">
+          <div class="crest"><img id="homeLogo" alt=""></div>
+          <strong id="homeName">HOME</strong>
+          <small>HOME</small>
+        </div>
+        <div class="vs-block">
+          <span class="status-pill" id="dateText">PRE-MATCH</span>
+          <b>VS</b>
+          <small id="fixtureId">FIXTURE —</small>
+        </div>
+        <div class="team-block">
+          <div class="crest"><img id="awayLogo" alt=""></div>
+          <strong id="awayName">AWAY</strong>
+          <small>AWAY</small>
+        </div>
+      </div>
+      <div class="venue-row"><span>⌖ <b id="venue">Match intelligence</b></span><span>API-FOOTBALL DATA</span></div>
+    </section>
+
+    <nav class="tabs" id="tabs" aria-label="Разделы матча">
+      <button class="active" data-tab="overview">Обзор</button>
+      <button data-tab="form">Форма</button>
+      <button data-tab="h2h">H2H</button>
+      <button data-tab="table">Таблица</button>
+      <button data-tab="odds">Odds</button>
+      <button data-tab="risk">Риск</button>
     </nav>
 
     <section id="content" class="content">
@@ -47,7 +71,7 @@
     </section>
   </main>
 
-  <footer>RUSTAM OS · DATA-DRIVEN FOOTBALL INTELLIGENCE</footer>
+  <footer><b>RUSTAM OS</b><span>DATA-DRIVEN FOOTBALL INTELLIGENCE</span></footer>
 </div>
 <script src="./app.js"></script>
 </body>
