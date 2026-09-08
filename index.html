@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#080b12">
+<meta name="theme-color" content="#08090D">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>RUSTAM OS — Football Intelligence</title>
+<title>AlmazStat — футбольная аналитика</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -16,62 +16,34 @@
 <div class="app-shell">
   <header class="topbar">
     <div class="brand">
-      <div class="brand-mark"><span>R</span></div>
-      <div><strong>RUSTAM OS</strong><small>FOOTBALL INTELLIGENCE</small></div>
+      <div class="brand-mark" aria-hidden="true"><span>◇</span></div>
+      <div><strong>AlmazStat</strong><small>ФУТБОЛЬНАЯ АНАЛИТИКА</small></div>
     </div>
     <div class="top-actions">
-      <span class="live-dot">LIVE ENGINE</span>
+      <span class="live-dot">ДАННЫЕ ОНЛАЙН</span>
       <button class="icon-btn" id="refresh" aria-label="Обновить">↻</button>
     </div>
   </header>
-
   <main>
     <section class="page-head">
-      <div>
-        <div class="kicker">MATCH INTELLIGENCE</div>
-        <h1 id="title">Выбери матч</h1>
-        <p id="subtitle">Загружаем аналитический пакет</p>
-      </div>
-      <div class="engine-badge"><i></i><span>DATA ENGINE<br><b>ONLINE</b></span></div>
+      <div><div class="kicker">ИНТЕЛЛЕКТ МАТЧА</div><h1 id="title">Выбери матч</h1><p id="subtitle">Собираем аналитический пакет</p></div>
+      <div class="engine-badge"><i></i><span>СИСТЕМА ДАННЫХ<br><b>ГОТОВА</b></span></div>
     </section>
-
     <section class="match-hero" id="matchCard">
-      <div class="competition-row"><span id="league">FOOTBALL</span><span id="kickoff">—</span></div>
+      <div class="competition-row"><span id="league">ФУТБОЛ</span><span id="kickoff">—</span></div>
       <div class="match-main">
-        <div class="team-block">
-          <div class="crest"><img id="homeLogo" alt=""></div>
-          <strong id="homeName">HOME</strong>
-          <small>HOME</small>
-        </div>
-        <div class="vs-block">
-          <span class="status-pill" id="dateText">PRE-MATCH</span>
-          <b>VS</b>
-          <small id="fixtureId">FIXTURE —</small>
-        </div>
-        <div class="team-block">
-          <div class="crest"><img id="awayLogo" alt=""></div>
-          <strong id="awayName">AWAY</strong>
-          <small>AWAY</small>
-        </div>
+        <div class="team-block"><div class="crest"><img id="homeLogo" alt=""></div><strong id="homeName">ХОЗЯЕВА</strong><small>ХОЗЯЕВА</small></div>
+        <div class="vs-block"><span class="status-pill" id="dateText">ПЕРЕД МАТЧЕМ</span><b>VS</b><small id="fixtureId">МАТЧ —</small></div>
+        <div class="team-block"><div class="crest"><img id="awayLogo" alt=""></div><strong id="awayName">ГОСТИ</strong><small>ГОСТИ</small></div>
       </div>
-      <div class="venue-row"><span>⌖ <b id="venue">Match intelligence</b></span><span>API-FOOTBALL DATA</span></div>
+      <div class="venue-row"><span>⌖ <b id="venue">Данные о стадионе</b></span><span>ИСТОЧНИК: API-FOOTBALL</span></div>
     </section>
-
     <nav class="tabs" id="tabs" aria-label="Разделы матча">
-      <button class="active" data-tab="overview">Обзор</button>
-      <button data-tab="form">Форма</button>
-      <button data-tab="h2h">H2H</button>
-      <button data-tab="table">Таблица</button>
-      <button data-tab="odds">Odds</button>
-      <button data-tab="risk">Риск</button>
+      <button class="active" data-tab="overview">Обзор</button><button data-tab="form">Форма</button><button data-tab="h2h">Очные</button><button data-tab="table">Таблица</button><button data-tab="odds">Коэффициенты</button><button data-tab="risk">Риск</button>
     </nav>
-
-    <section id="content" class="content">
-      <div class="loading"><div class="spinner"></div><b>RUSTAM ENGINE</b><span>Получаем реальные данные…</span></div>
-    </section>
+    <section id="content" class="content"><div class="loading"><div class="spinner"></div><b>ALMAZSTAT</b><span>Получаем реальные данные…</span></div></section>
   </main>
-
-  <footer><b>RUSTAM OS</b><span>DATA-DRIVEN FOOTBALL INTELLIGENCE</span></footer>
+  <footer><b>ALMAZSTAT</b><span>ФУТБОЛЬНАЯ АНАЛИТИКА НА ДАННЫХ</span></footer>
 </div>
 <script src="./app.js"></script>
 </body>
